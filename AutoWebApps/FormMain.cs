@@ -88,6 +88,11 @@ namespace Hans.Web
         /// <param name="e"></param>
         private void ButtonHtmlPHP_Click( object sender, EventArgs e )
         {
+            string currfile = this.TextHtmlPHP.Text;
+
+            bool hasfile = ( !string.IsNullOrEmpty( currfile ) );
+            if ( hasfile ) this.DialogFile.FileName = currfile;
+
             if ( this.DialogFile.ShowDialog( ) != DialogResult.OK ) return;
 
             this.TextHtmlPHP.Text = this.DialogFile.FileName;
@@ -125,6 +130,11 @@ namespace Hans.Web
         /// <param name="e"></param>
         private void ButtonGithub_Click( object sender, EventArgs e )
         {
+            string currpath = this.TextGithub.Text;
+
+            bool haspath = ( !string.IsNullOrEmpty( currpath ) );
+            if ( haspath ) this.DialogPath.SelectedPath = currpath;
+
             if ( this.DialogPath.ShowDialog( ) != DialogResult.OK ) return;
 
             this.TextGithub.Text = this.DialogPath.SelectedPath;
@@ -140,6 +150,11 @@ namespace Hans.Web
         /// <param name="e"></param>
         private void ButtonApache_Click( object sender, EventArgs e )
         {
+            string currpath = this.TextApache.Text;
+
+            bool haspath = ( !string.IsNullOrEmpty( currpath ) );
+            if ( haspath ) this.DialogPath.SelectedPath = currpath;
+
             if ( this.DialogPath.ShowDialog( ) != DialogResult.OK ) return;
 
             this.TextApache.Text = this.DialogPath.SelectedPath;
